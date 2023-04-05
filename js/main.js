@@ -270,21 +270,24 @@ const updatePer = (id) => {
             person.getAverageScore();
     
             list.updatePerson(person);    
-            showTable(list.personsArr)
-            setLocalStorage();
+            // showTable(list.personsArr)
+            setLocalStorage(list.personsArr);
+            getLocalStorage();
         } else if (type == 'Teacher') {
             let person = new Teacher(id, name, address, email, type, Number(workingDays), Number(dailySalary));
             person.getSalary();
     
             list.updatePerson(person);    
-            showTable(list.personsArr)
-            setLocalStorage();
+            // showTable(list.personsArr)
+            setLocalStorage(list.personsArr);
+            getLocalStorage();
         } else if (type == 'Customer') {
             let person = new Customer(id, name, address, email, type, companyName, orderValue, rating);
     
             list.updatePerson(person);    
-            showTable(list.personsArr)
-            setLocalStorage();
+            // showTable(list.personsArr)
+            setLocalStorage(list.personsArr);
+            getLocalStorage();
         }
     
         document.querySelector('#myModal .close').click();
